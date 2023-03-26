@@ -1,23 +1,48 @@
-import React from 'react'
+import React, { useState } from 'react'
 import css from './Header.module.scss'
+import { BiPhoneCall, BiMenuAltRight } from 'react-icons/bi'
+import { motion } from 'framer-motion'
+import { getMenuStyles, headerVariants } from '../../utils/motion'
+import useHeaderShadow from '../../hooks/useHeaderShadow'
+
 
 const Header = () => {
-  return (
-    <div className={`bg-primary ${css.wrapper}`}>
-        <div className={css.wrapper}>
-            <div className={css.name}>
-                Suneel
+
+    const [headerShown, setHeaderShown] = useState(false)
+    const headerShadow = useHeaderShadow()
+
+    return (
+        <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.25 }}
+            variants={headerVariants}
+            className={`paddings ${css.wrapper}`}
+            style={{ boxShadow: headerShadow }}
+        >
+            <div className={`flexCenter innerwidth ${css.container}`}>
+                <div className={css.name}>
+                    Suneel
+                </div>
+                <ul
+                    style={getMenuStyles(headerShown)}
+                    className={`flexCenter ${css.menu}`}>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Experience</a></li>
+                    <li><a href="">Portfolio</a></li>
+                    <li><a href="">Testimonials</a></li>
+                    <li className={`flexCenter ${css.phone}`}>
+                        <p>+91 9542384676</p>
+                        <BiPhoneCall size={'20px'} />
+                    </li>
+                </ul>
+                <div className={css.menuIcon} onClick={() => setHeaderShown((Prev) => !Prev)}>
+                    <BiMenuAltRight size={'20px'} />
+                </div>
             </div>
-        </div>
-        <ul>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-        </ul>
-    </div>
-  )
+
+        </motion.div>
+    )
 }
 
 export default Header

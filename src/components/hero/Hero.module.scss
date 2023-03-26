@@ -1,0 +1,87 @@
+@import '../../styles/contants.scss';
+.wrapper {
+    overflow: hidden;
+
+    .container {
+        position: relative;
+        z-index: 1;
+
+        .upperElements {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            @media (max-width:$sm) {
+                gap: 2rem;
+                text-align: center;
+                justify-content: center;
+            }
+        }
+
+        .lowerElements {
+            margin-top: 12rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            @media (max-width:$sm),(max-width:md) {
+                gap: 2rem;
+                margin-top: 4rem;
+                text-align: center;
+                justify-content: center;
+            }
+
+
+            .experience {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                >:nth-child(2) {
+                    line-height: 25px;
+                }
+            }
+
+            .certificate {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+
+                img {
+                    margin-bottom: 1rem;
+                    width: 3rem;
+                }
+            }
+        }
+
+        .person {
+            position: absolute;
+            bottom: -2rem;
+            margin: auto;            
+            left: 33%;
+            background-image: url('../splash.png');
+            background-repeat: no-repeat;
+            background-size: 23rem;
+            @media(max-width:$sm),(max-width:$md){
+                left: 0%;
+                position: relative; //try removing this
+                background-size: 20rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-position: bottom;
+            }
+        }   
+
+        .email {
+            color: orange;
+            top:50%;
+            left:0;
+            position:absolute;
+            @media(max-width:$sm),(max-width:$md){
+                display: none;
+            }
+        }
+    }
+}

@@ -1,3 +1,7 @@
+@import './contants.scss';
+
 .container{
-    
+    color: $primary;
+    font: 1rem sans-serif;
+    height: 200vh;
 }
