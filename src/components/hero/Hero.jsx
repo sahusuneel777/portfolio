@@ -26,7 +26,7 @@ const Hero = () => {
                 </motion.div>
 
                 <a className={`${css.email}`} href='mailto:sahusuneel777@gmail.com'>
-                    sahusuneel777
+                    sahusuneel777 
                 </a>
 
                 {/* lowerpart */}
