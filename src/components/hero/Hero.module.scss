@@ -24,7 +24,7 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            @media (max-width:$sm),(max-width:md) {
+            @media (max-width:$sm),(max-width:$md) {
                 gap: 2rem;
                 margin-top: 4rem;
                 text-align: center;
@@ -35,10 +35,14 @@
             .experience {
                 display: flex;
                 align-items: center;
-                gap: 1rem;
-
+                gap: 1rem;               
+                
                 >:nth-child(2) {
                     line-height: 25px;
+                    text-align: flex-start;
+                    @media (max-width:$sm),(max-width:md) {
+                    text-align: flex-start;
+                    }
                 }
             }
 

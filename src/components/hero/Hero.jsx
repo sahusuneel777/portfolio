@@ -6,6 +6,7 @@ import { fadeIn, slideIn, staggerContainer } from '../../utils/motion'
 const Hero = () => {
     return (
         <section className={`paddings ${css.wrapper}`}>
+            <a className="anchor" id="services"></a>
             <motion.div
                 variants={staggerContainer}
                 whileInView="show"
@@ -15,13 +16,13 @@ const Hero = () => {
                 className={`innerWidth ${css.container}`}>
                 {/* upper part */}
                 <div className={`${css.upperElements}`}>
-                    <motion.span variants={fadeIn("right","tween",0.2,1)} className='primaryText'>Hey There, <br />I'm Suneel.</motion.span>
-                    <motion.span variants={fadeIn('left',"tween",0.4,1)} className='secondaryText'>I design beautiful simple
-                        <br />things, And I love what i do</motion.span>
+                    <motion.span variants={fadeIn("right","tween",0.2,1)} className='primaryText'>Hello World, <br />I'm Suneel.</motion.span>
+                    <motion.span variants={fadeIn('left',"tween",0.4,1)} className='secondaryText'>First, solve the problem.<br /> Then, write the code.
+                       </motion.span>
                 </div>
 
                 <motion.div variants={fadeIn('up',"tween",0.2,1)} className={`${css.person}`}>
-                    <motion.img variants={slideIn('up',"tween",0.2,1)} src='./person.png' alt="my profile" />
+                    <motion.img variants={slideIn('up',"tween",0.2,1)} src='./suneel1.png' alt="my profile" />
                 </motion.div>
 
                 <a className={`${css.email}`} href='mailto:sahusuneel777@gmail.com'>
@@ -33,7 +34,7 @@ const Hero = () => {
                     <motion.div 
                     variants={fadeIn('right',"tween",0.2,1)}
                     className={`${css.experience}`}>
-                        <div className='primaryText'>10</div>
+                        <div className='primaryText'>2</div>
                         <div className='secondaryText'>
                             <div>Years</div>
                             <div>Experience</div>
@@ -43,8 +44,8 @@ const Hero = () => {
                      variants={fadeIn('left',"tween",0.2,1)}
                     className={`${css.certificate}`}>
                         <img src="./certificate.png" alt="certificate" />
-                        <span>CERTIFIED PROFATIONAL<br />
-                            UI/UX DESIGNER</span>
+                        <span>PROFESIONAL<br />
+                            FULLSTACK DEVELOPER</span>
                     </motion.div>
                 </div>
             </motion.div>

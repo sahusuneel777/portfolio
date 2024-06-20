@@ -2,6 +2,8 @@
 
 .container{
     color: $primary;
-    font: 1rem sans-serif;
-    height: 200vh;
+    font: 1rem "Eudoxus Sans";
+    overflow-x: clip;
+    position: relative;
+    color: $primary;
 }
