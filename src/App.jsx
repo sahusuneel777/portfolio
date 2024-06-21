@@ -3,7 +3,7 @@ import Expertise from "./components/Expertise/Expertise";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Hero from "./components/hero/Hero";
-import Portfolio from "./components/portfolio/portfolio";
+import Portfolio from "./components/portfolio/Portfolio";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Works from "./components/works/works";
 import css from './styles/app.module.scss'
