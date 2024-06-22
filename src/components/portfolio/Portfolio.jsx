@@ -18,7 +18,7 @@ const Portfolio = () => {
                         <span className='primaryText'>My Latest Works</span>
                         <p style={{ marginTop: "10px" }} className={'secondaryText'}>Perfect solution for digital experience</p>
                     </div>
-                    <a href='https://github.com/sahusuneel777' target="_blank">Explore More</a>
+                    <a className={css.exploreMore} href='https://github.com/sahusuneel777' target="_blank">Explore More</a>
                 </div>
 
                 <div className={`flexCenter paddings ${css.showCase}`}>

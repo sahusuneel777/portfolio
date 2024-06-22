@@ -8,10 +8,17 @@
         // padding:10px;
         .heading{
             justify-content: space-between;
+            margin-top: 1rem;
             width: 100%;
             @media(max-width:$sm){
                 flex-direction: column;
                 align-items: flex-start;
+            }
+
+            .exploreMore{
+                font-size: 1rem;
+                text-decoration: underline;
+                color: $primary;
             }
         }
         .showCase{

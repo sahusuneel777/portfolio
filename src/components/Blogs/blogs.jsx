@@ -24,7 +24,7 @@ const Blogs = () => {
                       <div className={css.blogDescription}>
                           <h1>{blogs[0].name}</h1>
                           <p>{blogs[0].description}</p>
-                          <a href={blogs[0].link} target='_blank'>Read more</a>
+                          <a style={{ textDecoration: 'none', color: 'inherit' }} href={blogs[0].link} target='_blank'>Read more</a>
                       </div>
                   </div>
 
